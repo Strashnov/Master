@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.TitleBarCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.TitleBarCtrls,
+  Vcl.ExtCtrls;
 
 type
   TformSettings = class(TForm)
@@ -18,11 +19,16 @@ type
     btnPathtoDatabase: TButton;
     OpenDialog: TOpenDialog;
     btnPassword: TButton;
+    btnConnect: TButton;
+    panLine: TPanel;
+    BalloonHint: TBalloonHint;
+    labSettings: TLabel;
     procedure btnPathtoDatabaseClick(Sender: TObject);
     procedure btnPasswordMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure btnPasswordMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure btnConnectClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,6 +41,20 @@ var
 implementation
 
 {$R *.dfm}
+
+uses DataBaseDataModule;
+
+procedure TformSettings.btnConnectClick(Sender: TObject);
+begin
+{$REGION 'Connect in database'}
+DataBase.FDConnection.Params.Database:=edtPathtoDatabase.Text;
+DataBase.FDConnection.Params.UserName:=edtUserName.Text;
+DataBase.FDConnection.Params.Password:=edtPassword.Text;
+{$ENDREGION}
+
+DataBase.FDConnection.Connected:=True; //Activ data base
+formSettings.Close; //Close form settings
+end;
 
 procedure TformSettings.btnPasswordMouseDown(Sender: TObject;
   Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
@@ -50,7 +70,7 @@ end;
 
 procedure TformSettings.btnPathtoDatabaseClick(Sender: TObject);
 begin
-   {$REGION 'MyRegion'}
+   {$REGION 'Path to database'}
     if OpenDialog.Execute then
      edtPathtoDatabase.Text:=OpenDialog.FileName;
    {$ENDREGION}

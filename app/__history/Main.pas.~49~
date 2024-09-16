@@ -65,7 +65,7 @@ implementation
 
 {$R *.dfm}
 
-uses DataBaseDataModule, About, Settings;
+uses DataBaseDataModule, About, Settings, sqlAll;
 
 procedure TformMain.actAboutExecute(Sender: TObject);
 begin
@@ -102,9 +102,8 @@ procedure TformMain.cbRequestChange(Sender: TObject);
 begin
 memRequest.Clear;
 case cbRequest.ItemIndex of
-    0: memRequest.Text:='Select * from Register;';
-    1: memRequest.Text:='Select Min(NANIMAL) from Register;';
-    2: memRequest.Text:='Select SPor.Im, Register.Date_Rogd, Register.NPol from SPor, Register;';
+    0: memRequest.Text:='Select * from Register';
+    1: memRequest.Text:='Select * from Register where NANIMAL = 1';
 end;
 end;
 

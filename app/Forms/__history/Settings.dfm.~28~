@@ -38,18 +38,18 @@ object formSettings: TformSettings
   object labUserName: TLabel
     Left = 8
     Top = 107
-    Width = 56
+    Width = 130
     Height = 15
     CustomHint = BalloonHint
-    Caption = 'User name'
+    Caption = 'The path to the database'
   end
   object labPathtoDatabase: TLabel
     Left = 8
     Top = 57
-    Width = 56
+    Width = 130
     Height = 15
     CustomHint = BalloonHint
-    Caption = 'User name'
+    Caption = 'The path to the database'
   end
   object labPassword: TLabel
     Left = 8
@@ -59,13 +59,30 @@ object formSettings: TformSettings
     CustomHint = BalloonHint
     Caption = 'Password'
   end
+  object labSettings: TLabel
+    Left = 8
+    Top = 225
+    Width = 316
+    Height = 15
+    CustomHint = BalloonHint
+    Caption = 'In this form, you can set up a connection to the database.'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object edtUserName: TEdit
     Left = 8
     Top = 128
     Width = 449
     Height = 23
+    Hint = 'The name of the database user'
     CustomHint = BalloonHint
-    TabOrder = 1
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
     Text = 'sysdba'
   end
   object TitleBarPanel: TTitleBarPanel
@@ -81,7 +98,10 @@ object formSettings: TformSettings
     Top = 78
     Width = 449
     Height = 23
+    Hint = 'Specify the path to the database'
     CustomHint = BalloonHint
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 0
   end
   object edtPassword: TEdit
@@ -89,9 +109,12 @@ object formSettings: TformSettings
     Top = 176
     Width = 449
     Height = 23
+    Hint = 'Database Password'
     CustomHint = BalloonHint
+    ParentShowHint = False
     PasswordChar = '*'
-    TabOrder = 2
+    ShowHint = True
+    TabOrder = 3
     Text = 'masterkey'
   end
   object btnPathtoDatabase: TButton
@@ -99,9 +122,12 @@ object formSettings: TformSettings
     Top = 77
     Width = 75
     Height = 25
+    Hint = 'Select a database'
     CustomHint = BalloonHint
     Caption = '...'
-    TabOrder = 4
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
     OnClick = btnPathtoDatabaseClick
   end
   object btnPassword: TButton
@@ -109,9 +135,12 @@ object formSettings: TformSettings
     Top = 175
     Width = 75
     Height = 25
+    Hint = 'Show password'
     CustomHint = BalloonHint
-    Caption = 'Password'
-    TabOrder = 5
+    Caption = 'Show'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 4
     OnMouseDown = btnPasswordMouseDown
     OnMouseUp = btnPasswordMouseUp
   end
@@ -120,9 +149,13 @@ object formSettings: TformSettings
     Top = 240
     Width = 75
     Height = 25
+    Hint = 'Connect to the database'
     CustomHint = BalloonHint
     Caption = 'Connect'
-    TabOrder = 6
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+    OnClick = btnConnectClick
   end
   object panLine: TPanel
     Left = 8
@@ -136,11 +169,11 @@ object formSettings: TformSettings
   end
   object OpenDialog: TOpenDialog
     Filter = '*.FDB|*.FDB|*.*|*.*'
-    Left = 32
-    Top = 216
+    Left = 336
+    Top = 232
   end
   object BalloonHint: TBalloonHint
-    Left = 128
-    Top = 216
+    Left = 416
+    Top = 232
   end
 end

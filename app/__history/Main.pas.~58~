@@ -65,7 +65,7 @@ implementation
 
 {$R *.dfm}
 
-uses DataBaseDataModule, About, Settings;
+uses DataBaseDataModule, About, Settings, sqlAll;
 
 procedure TformMain.actAboutExecute(Sender: TObject);
 begin

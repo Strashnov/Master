@@ -51,8 +51,9 @@ DataBase.FDConnection.Params.Database:=edtPathtoDatabase.Text;
 DataBase.FDConnection.Params.UserName:=edtUserName.Text;
 DataBase.FDConnection.Params.Password:=edtPassword.Text;
 {$ENDREGION}
-DataBase.FDManager.Active:=True; //Active menager database
+
 DataBase.FDConnection.Connected:=True; //Activ data base
+DataBase.FDQuery.Active:=True;
 formSettings.Close; //Close form settings
 end;
 

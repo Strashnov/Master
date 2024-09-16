@@ -298,8 +298,8 @@ object formMain: TformMain
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 36
-    Top = 493
+    Left = 20
+    Top = 5
     object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1

@@ -15,10 +15,11 @@ object DataBase: TDataBase
   end
   object FDConnection: TFDConnection
     Params.Strings = (
-      'CharacterSet=UTF8'
-      'DriverID=FB'
+      'Database=C:\appTest\DataBase\PLINOR.FDB'
       'User_Name=sysdba'
-      'Password=masterkey')
+      'Password=masterkey'
+      'CharacterSet=UTF8'
+      'DriverID=FB')
     Transaction = FDTransaction
     UpdateTransaction = FDTransaction
     Left = 48
@@ -28,7 +29,6 @@ object DataBase: TDataBase
     FormatOptions.AssignedValues = [fvMapRules]
     FormatOptions.OwnMapRules = True
     FormatOptions.MapRules = <>
-    Active = True
     Left = 48
     Top = 56
   end
