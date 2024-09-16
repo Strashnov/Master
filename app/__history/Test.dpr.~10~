@@ -6,8 +6,7 @@ uses
   DataBaseDataModule in 'DataModule\DataBaseDataModule.pas' {DataBase: TDataModule},
   About in 'Forms\About.pas' {formAbout},
   Vcl.Themes,
-  Vcl.Styles,
-  Settings in 'Forms\Settings.pas' {formSettings};
+  Vcl.Styles;
 
 {$R *.res}
 
@@ -17,6 +16,5 @@ begin
   Application.CreateForm(TformMain, formMain);
   Application.CreateForm(TDataBase, DataBase);
   Application.CreateForm(TformAbout, formAbout);
-  Application.CreateForm(TformSettings, formSettings);
   Application.Run;
 end.

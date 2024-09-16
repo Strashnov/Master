@@ -1,0 +1,63 @@
+unit Settings;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.TitleBarCtrls,
+  Vcl.ExtCtrls;
+
+type
+  TformSettings = class(TForm)
+    edtUserName: TEdit;
+    TitleBarPanel: TTitleBarPanel;
+    labUserName: TLabel;
+    labPathtoDatabase: TLabel;
+    edtPathtoDatabase: TEdit;
+    labPassword: TLabel;
+    edtPassword: TEdit;
+    btnPathtoDatabase: TButton;
+    OpenDialog: TOpenDialog;
+    btnPassword: TButton;
+    btnConnect: TButton;
+    panLine: TPanel;
+    BalloonHint: TBalloonHint;
+    procedure btnPathtoDatabaseClick(Sender: TObject);
+    procedure btnPasswordMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure btnPasswordMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formSettings: TformSettings;
+
+implementation
+
+{$R *.dfm}
+
+procedure TformSettings.btnPasswordMouseDown(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+begin
+edtPassword.PasswordChar:=#0;
+end;
+
+procedure TformSettings.btnPasswordMouseUp(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+begin
+edtPassword.PasswordChar:=#42;
+end;
+
+procedure TformSettings.btnPathtoDatabaseClick(Sender: TObject);
+begin
+   {$REGION 'MyRegion'}
+    if OpenDialog.Execute then
+     edtPathtoDatabase.Text:=OpenDialog.FileName;
+   {$ENDREGION}
+end;
+
+end.

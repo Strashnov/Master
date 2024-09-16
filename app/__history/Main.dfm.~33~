@@ -38,7 +38,7 @@ object formMain: TformMain
     Left = 0
     Top = 0
     Width = 624
-    Height = 40
+    Height = 39
     CustomHint = BalloonHint
     CustomButtons = <
       item
@@ -47,15 +47,16 @@ object formMain: TformMain
         Hint = 'About'
         Width = 46
         Visible = True
+        OnPaint = TitleBarPanelCustomButtons0Paint
         OnClick = actAboutExecute
       end>
     DesignSize = (
       624
-      40)
+      39)
     object ActionMainMenuBar: TActionMainMenuBar
       Left = 64
       Top = 5
-      Width = 113
+      Width = 62
       Height = 21
       CustomHint = BalloonHint
       UseSystemFont = False
@@ -97,8 +98,6 @@ object formMain: TformMain
             Caption = '&Help'
           end>
         ActionBar = ActionMainMenuBar
-      end
-      item
       end>
     Images = ImageList
     Left = 560
@@ -117,6 +116,12 @@ object formMain: TformMain
     object actAbout: TAction
       Caption = '&About'
       OnExecute = actAboutExecute
+    end
+    object actTools: TAction
+      Caption = '&Tools'
+    end
+    object actSettings: TAction
+      Caption = '&Settings'
     end
   end
   object ImageList: TImageList

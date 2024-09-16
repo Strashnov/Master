@@ -12,18 +12,18 @@ object formMain: TformMain
   CustomTitleBar.SystemHeight = False
   CustomTitleBar.SystemColors = False
   CustomTitleBar.SystemButtons = False
-  CustomTitleBar.BackgroundColor = clInactiveCaption
+  CustomTitleBar.BackgroundColor = clSkyBlue
   CustomTitleBar.ForegroundColor = 65793
-  CustomTitleBar.InactiveBackgroundColor = clWhite
+  CustomTitleBar.InactiveBackgroundColor = clSkyBlue
   CustomTitleBar.InactiveForegroundColor = 10066329
   CustomTitleBar.ButtonForegroundColor = 65793
-  CustomTitleBar.ButtonBackgroundColor = clInactiveCaption
+  CustomTitleBar.ButtonBackgroundColor = clSkyBlue
   CustomTitleBar.ButtonHoverForegroundColor = 65793
   CustomTitleBar.ButtonHoverBackgroundColor = clSkyBlue
   CustomTitleBar.ButtonPressedForegroundColor = 65793
   CustomTitleBar.ButtonPressedBackgroundColor = 15395562
   CustomTitleBar.ButtonInactiveForegroundColor = 10066329
-  CustomTitleBar.ButtonInactiveBackgroundColor = clWhite
+  CustomTitleBar.ButtonInactiveBackgroundColor = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -31,6 +31,7 @@ object formMain: TformMain
   Font.Style = []
   GlassFrame.Enabled = True
   GlassFrame.Top = 40
+  Position = poDesktopCenter
   StyleElements = [seFont]
   TextHeight = 15
   object TitleBarPanel: TTitleBarPanel
@@ -46,6 +47,7 @@ object formMain: TformMain
         Hint = 'About'
         Width = 46
         Visible = True
+        OnPaint = TitleBarPanelCustomButtons0Paint
         OnClick = actAboutExecute
       end>
     DesignSize = (
@@ -54,18 +56,16 @@ object formMain: TformMain
     object ActionMainMenuBar: TActionMainMenuBar
       Left = 64
       Top = 5
-      Width = 113
+      Width = 100
       Height = 21
       CustomHint = BalloonHint
       UseSystemFont = False
       ActionManager = ActionManager
       Align = alNone
       Caption = 'ActionMainMenuBar'
-      Color = clInactiveCaption
-      ColorMap.Color = clInactiveCaption
+      Color = clMenuBar
       ColorMap.DisabledFontColor = 10461087
-      ColorMap.HighlightColor = clInactiveCaption
-      ColorMap.MenuColor = clInactiveCaption
+      ColorMap.HighlightColor = clWhite
       ColorMap.BtnSelectedFont = clBlack
       ColorMap.UnusedColor = clWhite
       Font.Charset = DEFAULT_CHARSET
@@ -74,6 +74,8 @@ object formMain: TformMain
       Font.Name = 'Segoe UI'
       Font.Style = []
       HorzMargin = -1
+      ParentShowHint = False
+      ShowHint = True
       Spacing = 0
       VertMargin = -1
     end
@@ -90,6 +92,13 @@ object formMain: TformMain
                 Action = actClose
               end>
             Caption = '&File'
+          end
+          item
+            Items = <
+              item
+                Action = actSettings
+              end>
+            Caption = '&Tools'
           end
           item
             Color = clSkyBlue
@@ -114,6 +123,13 @@ object formMain: TformMain
     object actAbout: TAction
       Caption = '&About'
       OnExecute = actAboutExecute
+    end
+    object actTools: TAction
+      Caption = '&Tools'
+    end
+    object actSettings: TAction
+      Caption = '&Settings'
+      OnExecute = actSettingsExecute
     end
   end
   object ImageList: TImageList

@@ -14,12 +14,6 @@ object DataBase: TDataBase
     Top = 288
   end
   object FDConnection: TFDConnection
-    Params.Strings = (
-      'Database=C:\appTest\DataBase\PLINOR.FDB'
-      'User_Name=sysdba'
-      'Password=masterkey'
-      'CharacterSet=UTF8'
-      'DriverID=FB')
     Transaction = FDTransaction
     UpdateTransaction = FDTransaction
     Left = 48

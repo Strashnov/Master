@@ -47,6 +47,7 @@ object formMain: TformMain
         Hint = 'About'
         Width = 46
         Visible = True
+        OnPaint = TitleBarPanelCustomButtons0Paint
         OnClick = actAboutExecute
       end>
     DesignSize = (
@@ -58,7 +59,6 @@ object formMain: TformMain
       Width = 62
       Height = 21
       CustomHint = BalloonHint
-      UseSystemFont = False
       ActionManager = ActionManager
       Align = alNone
       Caption = 'ActionMainMenuBar'
@@ -68,7 +68,7 @@ object formMain: TformMain
       ColorMap.BtnSelectedFont = clBlack
       ColorMap.UnusedColor = clWhite
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
+      Font.Color = clWindowText
       Font.Height = -12
       Font.Name = 'Segoe UI'
       Font.Style = []
@@ -97,8 +97,6 @@ object formMain: TformMain
             Caption = '&Help'
           end>
         ActionBar = ActionMainMenuBar
-      end
-      item
       end>
     Images = ImageList
     Left = 560

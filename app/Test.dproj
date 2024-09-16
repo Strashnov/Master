@@ -137,6 +137,10 @@
             <Form>formAbout</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Forms\Settings.pas">
+            <Form>formSettings</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="Test.todo"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>

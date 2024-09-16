@@ -7,7 +7,7 @@ uses
   About in 'Forms\About.pas' {formAbout},
   Vcl.Themes,
   Vcl.Styles,
-  Settings in 'Forms\Settings.pas' {formSettings};
+  Settings in 'Forms\Settings.pas' {Form1};
 
 {$R *.res}
 
@@ -17,6 +17,6 @@ begin
   Application.CreateForm(TformMain, formMain);
   Application.CreateForm(TDataBase, DataBase);
   Application.CreateForm(TformAbout, formAbout);
-  Application.CreateForm(TformSettings, formSettings);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.

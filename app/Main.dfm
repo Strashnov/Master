@@ -38,7 +38,7 @@ object formMain: TformMain
     Left = 0
     Top = 0
     Width = 624
-    Height = 40
+    Height = 39
     CustomHint = BalloonHint
     CustomButtons = <
       item
@@ -52,13 +52,14 @@ object formMain: TformMain
       end>
     DesignSize = (
       624
-      40)
+      39)
     object ActionMainMenuBar: TActionMainMenuBar
       Left = 64
       Top = 5
-      Width = 62
+      Width = 100
       Height = 21
       CustomHint = BalloonHint
+      UseSystemFont = False
       ActionManager = ActionManager
       Align = alNone
       Caption = 'ActionMainMenuBar'
@@ -68,7 +69,7 @@ object formMain: TformMain
       ColorMap.BtnSelectedFont = clBlack
       ColorMap.UnusedColor = clWhite
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clBlack
       Font.Height = -12
       Font.Name = 'Segoe UI'
       Font.Style = []
@@ -93,6 +94,13 @@ object formMain: TformMain
             Caption = '&File'
           end
           item
+            Items = <
+              item
+                Action = actSettings
+              end>
+            Caption = '&Tools'
+          end
+          item
             Color = clSkyBlue
             Caption = '&Help'
           end>
@@ -115,6 +123,13 @@ object formMain: TformMain
     object actAbout: TAction
       Caption = '&About'
       OnExecute = actAboutExecute
+    end
+    object actTools: TAction
+      Caption = '&Tools'
+    end
+    object actSettings: TAction
+      Caption = '&Settings'
+      OnExecute = actSettingsExecute
     end
   end
   object ImageList: TImageList

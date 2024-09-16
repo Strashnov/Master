@@ -26,10 +26,13 @@ type
     ImageList: TImageList;
     BalloonHint: TBalloonHint;
     actHelp: TAction;
+    actTools: TAction;
+    actSettings: TAction;
     procedure btnColorClick(Sender: TObject);
     procedure actCloseExecute(Sender: TObject);
     procedure actAboutExecute(Sender: TObject);
     procedure TitleBarPanelCustomButtons0Paint(Sender: TObject);
+    procedure actSettingsExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,7 +46,7 @@ implementation
 
 {$R *.dfm}
 
-uses DataBaseDataModule, About;
+uses DataBaseDataModule, About, Settings;
 
 procedure TformMain.actAboutExecute(Sender: TObject);
 begin
@@ -53,6 +56,11 @@ end;
 procedure TformMain.actCloseExecute(Sender: TObject);
 begin
   Application.Terminate; // Close all form
+end;
+
+procedure TformMain.actSettingsExecute(Sender: TObject);
+begin
+formSettings.ShowModal;//Open form settings
 end;
 
 procedure TformMain.btnColorClick(Sender: TObject);
