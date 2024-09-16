@@ -2,8 +2,18 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>1899.12.30 00:00:00.000.982,C:\appTest\app\DataModule\DataBaseDataModule.pas=C:\appTest\app\Unit1.pas</Transaction>
+<<<<<<< HEAD
+=======
+    <Transaction>1899.12.30 00:00:00.000.403,C:\appTest\app\Unit1.pas=C:\appTest\app\Library\sqlAll.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.231,=C:\appTest\app\Unit1.pas</Transaction>
+>>>>>>> 7855133b3eba053b8f1b791cfee385175c3faead
     <Transaction>1899.12.30 00:00:00.000.649,=C:\appTest\app\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.930,C:\appTest\app\Forms\Settings.dfm=C:\appTest\app\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.920,C:\appTest\app\Forms\Settings.pas=C:\appTest\app\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.813,C:\appTest\app\Forms\About.pas=C:\appTest\app\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.753,C:\appTest\app\Main.pas=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.297,=C:\appTest\app\Unit1.pas</Transaction>
+<<<<<<< HEAD
     <Transaction>1899.12.30 00:00:00.000.231,=C:\appTest\app\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.930,C:\appTest\app\Forms\Settings.dfm=C:\appTest\app\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.920,C:\appTest\app\Forms\Settings.pas=C:\appTest\app\Unit1.pas</Transaction>
@@ -18,6 +28,16 @@
     <Transaction>1899.12.30 00:00:00.000.982,C:\appTest\app\DataModule\DataBaseDataModule.dfm=C:\appTest\app\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.753,C:\appTest\app\Main.dfm=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.898,=C:\appTest\app\Test.todo</Transaction>
+=======
+    <Transaction>1899.12.30 00:00:00.000.347,C:\appTest\app\Test.dproj=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.813,C:\appTest\app\Forms\About.dfm=C:\appTest\app\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.102,=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.898,=C:\appTest\app\Test.todo</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.382,=C:\appTest\app\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.982,C:\appTest\app\DataModule\DataBaseDataModule.dfm=C:\appTest\app\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.753,C:\appTest\app\Main.dfm=C:\Users\user\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024.09.16 18:12:15.525,C:\appTest\app\Library\sqlAll.pas=</Transaction>
+>>>>>>> 7855133b3eba053b8f1b791cfee385175c3faead
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="DataModule"/>
