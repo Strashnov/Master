@@ -44,6 +44,7 @@ type
     BindSourceDB1: TBindSourceDB;
     BindingsList1: TBindingsList;
     LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
+    edtFind: TEdit;
     procedure actCloseExecute(Sender: TObject);
     procedure actAboutExecute(Sender: TObject);
     procedure TitleBarPanelCustomButtons0Paint(Sender: TObject);
@@ -52,6 +53,7 @@ type
     procedure btnRequestClick(Sender: TObject);
     procedure btnClearRequestClick(Sender: TObject);
     procedure cbRequestChange(Sender: TObject);
+    procedure edtFindChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -105,6 +107,17 @@ case cbRequest.ItemIndex of
     0: memRequest.Text:='Select * from Register;';
     1: memRequest.Text:='Select Min(NANIMAL) from Register;';
     2: memRequest.Text:='Select SPor.Im, Register.Date_Rogd, Register.NPol from SPor, Register;';
+end;
+end;
+
+procedure TformMain.edtFindChange(Sender: TObject);
+begin
+with DataBase.FDQuery do
+begin
+  Close;
+  SQL.Clear;
+  SQL.Add('Select * from Register where klichka like'+QuotedStr('%'+edtFind.Text+'%'));
+  Open;
 end;
 end;
 

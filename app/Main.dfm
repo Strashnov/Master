@@ -36,12 +36,13 @@ object formMain: TformMain
   TextHeight = 15
   object Splitter: TSplitter
     Left = 565
-    Top = 39
-    Height = 577
+    Top = 62
+    Height = 554
     CustomHint = BalloonHint
     Align = alRight
     ExplicitLeft = 627
     ExplicitTop = 33
+    ExplicitHeight = 577
   end
   object TitleBarPanel: TTitleBarPanel
     Left = 0
@@ -150,9 +151,9 @@ object formMain: TformMain
   end
   object panRequest: TPanel
     Left = 568
-    Top = 39
+    Top = 62
     Width = 256
-    Height = 577
+    Height = 554
     CustomHint = BalloonHint
     Align = alRight
     BevelOuter = bvNone
@@ -177,7 +178,7 @@ object formMain: TformMain
       Left = 0
       Top = 20
       Width = 256
-      Height = 557
+      Height = 534
       Hint = 'SQL query'
       CustomHint = BalloonHint
       Align = alClient
@@ -189,9 +190,9 @@ object formMain: TformMain
   end
   object panStringGrid: TPanel
     Left = 0
-    Top = 39
+    Top = 62
     Width = 565
-    Height = 577
+    Height = 554
     CustomHint = BalloonHint
     Align = alClient
     BevelOuter = bvNone
@@ -217,17 +218,29 @@ object formMain: TformMain
       Left = 0
       Top = 20
       Width = 565
-      Height = 557
+      Height = 534
       Hint = 'Output on request'
       CustomHint = BalloonHint
       Align = alClient
       ColCount = 1
       FixedCols = 0
       RowCount = 2
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect, goFixedRowDefAlign]
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
     end
+  end
+  object edtFind: TEdit
+    Left = 0
+    Top = 39
+    Width = 824
+    Height = 23
+    CustomHint = BalloonHint
+    Align = alTop
+    TabOrder = 4
+    TextHint = 'Find klichka'
+    OnChange = edtFindChange
   end
   object ActionManager: TActionManager
     ActionBars = <
